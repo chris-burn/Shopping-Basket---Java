@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 
 /**
@@ -54,5 +53,29 @@ public class CheckOutTest {
         basket.addToBasket(glasses);
         assertEquals(39.60, checkOut.subtotalIncOffers(), 0.01);
     }
+
+//    @Test
+//    public void canCalculateTotal_Under20_NotIncludingLoyalty(){
+//        this.customer = new Customer(false);
+//        basket.addToBasket(steak);
+//        basket.addToBasket(steak);
+//        assertEquals(10.00, checkOut.totalInclLoyalty(), 0.01);
+//    }
+
+    @Test
+    public void canCalculateTotal_Under20_includingLoyalty(){
+        basket.addToBasket(steak);
+        basket.addToBasket(steak);
+        assertEquals(9.80, checkOut.totalInclLoyalty(), 0.01);
+    }
+
+//    @Test
+//    public void canCalculateTotal_Over20_includingLoyalty(){
+////        this.customer = new Customer(true);
+//        basket.addToBasket(steak);
+//        basket.addToBasket(steak);
+//        assertEquals(9.80, checkOut.totalInclLoyalty(), 0.01);
+//    }
+
 
 }

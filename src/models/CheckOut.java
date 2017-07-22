@@ -39,4 +39,18 @@ public class CheckOut {
         }
     }
 
+    public float totalInclLoyalty(){
+//        use previous subTotal via last method
+        total = subtotalIncOffers();
+        if (customer.hasLoyaltyCard() == true) {
+           return total * 0.98f;
+        }
+        else {
+            return total;
+        }
+    }
+
+
+    // TODO: 22/07/2017 Add final customer discount in,   total = SubTotal ---  if (customer.hasLoyaltyCard = true){ total * 0.98 } return total
+
 }

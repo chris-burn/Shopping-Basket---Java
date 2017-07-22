@@ -20,7 +20,6 @@ public class CustomerTest {
         customer = new Customer(true);
     }
 
-
     @Test
     public void canCustomerHaveLoyaltyCard(){
         assertEquals(true, customer.hasLoyaltyCard());
