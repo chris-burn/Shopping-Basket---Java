@@ -4,7 +4,6 @@ import models.Basket;
 import models.CheckOut;
 import models.Customer;
 import models.Item;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -21,13 +20,6 @@ public class CheckOutTest {
     Item steak = new Item("28 day fillet", 10.00f);
     Item glasses = new Item("set of 6 goblets", 22.00f);
     Item milk = new Item("four pints, whole milk", 2.25f);
-
-//    @Before
-//    public void Setup(){
-//        this.basket = new Basket();
-//        this.customer = new Customer(true);
-//        this.checkOut = new CheckOut(customer, basket);
-//    }
 
     @Test
     public void canGetSubTotalWithFreeOffer(){

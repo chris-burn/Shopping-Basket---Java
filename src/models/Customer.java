@@ -5,7 +5,6 @@ package models;
  */
 public class Customer {
 
-    private Basket basket;
     private boolean shopLoyaltyCard;
 
     public Customer(boolean shopLoyaltyCard){
@@ -13,9 +12,8 @@ public class Customer {
     }
 
     public boolean hasLoyaltyCard() {
-        return shopLoyaltyCard;
+        return this.shopLoyaltyCard;
     }
-
 
 
 }

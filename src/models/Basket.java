@@ -6,11 +6,11 @@ import java.util.ArrayList;
  * Created by user on 22/07/2017.
  */
 public class Basket {
-   private Item item;
+
    private ArrayList<Item> list;
 
     public Basket(){
-        this.list = new ArrayList<Item>();
+        list = new ArrayList<Item>();
     }
 
     public ArrayList<Item> getList() {
