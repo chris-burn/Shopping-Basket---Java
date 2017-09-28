@@ -1,8 +1,5 @@
 package models;
 
-/**
- * Created by user on 22/07/2017.
- */
 public class Item {
 
     private String description;

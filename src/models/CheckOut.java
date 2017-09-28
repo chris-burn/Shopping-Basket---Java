@@ -2,9 +2,6 @@ package models;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 22/07/2017.
- */
 
 public class CheckOut {
 
@@ -17,17 +14,17 @@ public class CheckOut {
     public CheckOut(Customer customer, Basket basket) {
         this.customer = customer;
         this.basket = basket;
-        freeOfferList = new ArrayList<Item>();
+        freeOfferList = new ArrayList<>();
         this.total = 0;
         this.subTotal = 0;
     }
 
     public float subtotalIncOffers() {
 //        loop through basket and check whether we have item in secondary "free" arrayList,
-//          if not present adds item to new arrayList AND adds price to subTotal counter, if present removes item previously placed there
-//          doesn't update subtotal upon removal, allows item to be added again and added to subTotal if required
+//          if not present adds item to new arrayList AND adds price to subTotal counter, if already present removes item previously placed there
+//          doesn't update subtotal upon removal, allows item to be added again and added to subTotal again if necessary
         for (Item item : basket.getList()) {
-            if (freeOfferList.contains(item) == false) {
+            if (!freeOfferList.contains(item)) {
                 freeOfferList.add(item);
                 subTotal += item.getPrice();
             }
@@ -45,7 +42,7 @@ public class CheckOut {
     public float totalInclLoyalty() {
 //        use previous subTotal method and runs through loyalty discount calc
         total = subtotalIncOffers();
-        if (customer.hasLoyaltyCard() == true) {
+        if (customer.hasLoyaltyCard()) {
             return total * 0.98f;
         } else {
             return total;

@@ -7,10 +7,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-
-/**
- * Created by user on 22/07/2017.
- */
 public class BasketTest {
 
     Basket basket;

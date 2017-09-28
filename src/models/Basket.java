@@ -2,9 +2,6 @@ package models;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 22/07/2017.
- */
 public class Basket {
 
    private ArrayList<Item> list;
@@ -14,7 +11,7 @@ public class Basket {
     }
 
     public ArrayList<Item> getList() {
-        return list;
+        return new ArrayList<Item>(list);
     }
 
     public void addToBasket(Item item){
